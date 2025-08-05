@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>certificates - mohitkumarsharma</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Gallery Styling */
+        .gallery-section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .lightbox-content {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 80%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== Top Header ===== -->
+<div class="top-header">
+    <h1>MOHIT KUMAR SHARMA</h1>
+    <p>B.VOC (IOT) Internet Of Things</p>
+    <p>Department of Physics and Computer Science<br>
+       Faculty of Science, dayalbagh educational institute, Agra</p>
+    <div class="contact-info">
+        <a href="mailto:yourmail@gmail.com">📧 mohitdei2112@gmail.com</a> |
+        <a href="#">🖥️LinkedIn</a>
+    </div>
+</div>
+
+<!-- ===== Navigation ===== -->
+<nav>
+    <ul>
+        <li><a href="Home.html" class="active">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="certificates.html">certificates</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ===== Gallery Section ===== -->
+<div class="gallery-section">
+    <h2>CERTIFICATES</h2>
+    <p>Education & Games </p>
+
+    <div class="gallery-grid">
+        <img src="images/certificate1.jpg" alt="Photo 1">
+        <img src="images/certificate2.jpg" alt="Photo 2">
+        <img src="images/certificate3.jpg" alt="Photo 3">
+        <img src="images/certificate4.jpg" alt="Photo 4">
+        <img src="images/certificate11.png" alt="Photo 11">
+        <img src="images/certificate5.jpg" alt="Photo 5">
+        <img src="images/certificate6.jpg" alt="Photo 6">
+        <img src="images/certificate7.jpg" alt="Photo 7">
+        <img src="images/certificate8.jpg" alt="Photo 8">
+        <img src="images/certificate9.jpg" alt="Photo 9">
+        <img src="images/certificate10.jpg" alt="Photo 10">
+    </div>
+</div>
+
+<!-- ===== Lightbox ===== -->
+<div id="lightbox" class="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+</div>
+
+<!-- ===== Footer ===== -->
+<footer>
+    <p>© 2025 My Website | Designed by Me</p>
+</footer>
+
+<!-- ===== JavaScript for Lightbox ===== -->
+<script>
+    const images = document.querySelectorAll('.gallery-grid img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeBtn');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'block';
+            lightboxImg.src = img.src;
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>

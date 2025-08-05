@@ -1,0 +1,129 @@
+/* ===== Global Styles ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== Top Header ===== */
+.top-header {
+    background: linear-gradient(90deg, #f4cc3a, #004aad);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 10px;
+}
+
+.top-header h1 {
+    margin: 5px 0;
+    font-size: 35px;
+}
+
+.top-header p {
+    margin: 3px 0;
+    font-size: 20px;
+}
+
+.top-header .contact-info {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.top-header .contact-info a {
+    color: white;
+    margin: 0 8px;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+    background: #222;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background: #0077cc;
+}
+
+/* ===== Main Content ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bio {
+    flex: 1 1 60%;
+}
+
+.bio h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.bio h3 {
+    color: #004aad;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.bio p {
+    line-height: 1.6;
+}
+
+.profile-pic {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-pic img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+
+
